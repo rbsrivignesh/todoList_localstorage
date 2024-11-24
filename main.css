@@ -158,6 +158,9 @@ input[type="checkbox"]{
         font-size: 12pt;
 
     }
+    #todo-input{
+     
+        padding-right: 20px;}
     #add-button{
         position: unset;
         width: 100%;
