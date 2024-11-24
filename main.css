@@ -44,6 +44,7 @@ h1{
 #todo-input{
     box-sizing: border-box;
     padding: 12px 20px;
+    padding-right: 150px;
     width: 100%;
     background: none;
     border: 2px solid var(--secondary-color);
@@ -96,6 +97,21 @@ form{
     align-items: center;
     cursor: pointer;
 }
+.edit {
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 3px;
+    background:none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+.edit:hover{
+    color: #f03;
+}
 .delete-button svg{
     transition: 200ms ease;
 } 
@@ -120,12 +136,21 @@ input[type="checkbox"]:checked ~ .custom-checkbox{
 input[type="checkbox"]:checked ~ .custom-checkbox svg{
    fill: var(--primary-color);
 }
-input[type="checkbox"]:checked ~ .todo-text{
+input[type="checkbox"]:checked ~ .todo-text > #text{
     text-decoration: line-through;
     color: var(--secondary-color);
 }
 input[type="checkbox"]{
     display: none;
+}
+.todo .todo-text{
+    background: transparent;
+     font: inherit;
+    color: var(--text-color);
+    caret-color: var(--accent-color);
+    outline: none;
+    border: none;
+    width: 90%;
 }
 
 @media (max-width:500px) {
